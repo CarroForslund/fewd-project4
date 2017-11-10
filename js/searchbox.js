@@ -10,7 +10,7 @@ function organizeImageList () {
 
   for (let i = 0; i < imageLinks.length; i++){
     //Get every image's information
-    const imgSrc = imageLinks[i].querySelector('img').src.slice(-13);;
+    const imgSrc = imageLinks[i].querySelector('img').src.slice(-13);
     const imgTitle = imageLinks[i].querySelector('img').title;
     const imgCaption = imageLinks[i].getAttribute('data-caption');
 
@@ -22,8 +22,8 @@ function organizeImageList () {
     };
     //Add image to the new array images
     images.push(image);
-  };
-};
+  }
+}
 
 //Add functionality to search field
 searchbox.addEventListener('keypress', function (e) {
@@ -33,14 +33,14 @@ searchbox.addEventListener('keypress', function (e) {
   if (key === 13) { // 13 is enter
     input.value = '';
     searchImages(value);
-  };
-});
+  }
+})
 
 searchbox.onkeyup = function(){
   const input = document.querySelector('input');
   const value = input.value;
   searchImages(value);
-};
+}
 
 /* SEARCH FOR IMAGES
 ** Use input from the search box to find matching image names or captions
@@ -60,8 +60,8 @@ function searchImages(input){
 
       searchResult.push(images[i]);
 
-    };
-  };
+    }
+  }
 
   clearGallery();
 
@@ -76,20 +76,20 @@ function searchImages(input){
     const img = document.createElement('img');
     img.src = searchResult[i].src;
     img.alt = searchResult[i].title;
-    img.title = searchResult[i].title;;
+    img.title = searchResult[i].title;
 
     imageLink.appendChild(img);
     main.appendChild(imageLink);
-  };
+  }
 
-};
+}
 
 // CLEAR GALLERY
 function clearGallery(){
   while (main.firstChild) {
     main.removeChild(main.firstChild);
   }
-};
+}
 
 //Functions to run onload
 organizeImageList();
