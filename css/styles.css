@@ -21,6 +21,13 @@ input {
   font-size: 16pt;
 }
 
+footer p {
+  font-style: italic;
+  font-size: small;
+  text-align: center;
+  color: #e4e4e4;
+}
+
 /* TABLET SIZE
 -------------------------------------*/
 @media screen and (min-width: 768px) {
