@@ -19,6 +19,8 @@ input {
   margin: 2em auto;
   padding: .2em;
   font-size: 16pt;
+  text-align: center;
+  border: 1px solid #ececec;
 }
 
 footer p {
@@ -26,6 +28,7 @@ footer p {
   font-size: small;
   text-align: center;
   color: #e4e4e4;
+  margin: 4em 0;
 }
 
 /* TABLET SIZE
@@ -39,14 +42,14 @@ footer p {
 
   main {
     margin: 0 auto;
-    padding: 3em;
-    width: 80%;
-    justify-content: flex-start;
+    /*padding: 3em;*/
+    width: 100%;
+    justify-content: center;
   }
 
   a {
     flex-basis: 25%;
-    width: 200px;
+    min-width: 200px;
     height: 200px;
     margin: 1.5em;
   }
@@ -54,7 +57,7 @@ footer p {
   img {
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
   }
 
 }
@@ -64,11 +67,13 @@ footer p {
 @media screen and (min-width: 1024px) {
 
   main {
-    width: 1000px;
+    width: 80%;
   }
 
   a {
     flex-basis: 20%;
+    max-width: 200px;
+    height: 200px;
   }
 
 }
